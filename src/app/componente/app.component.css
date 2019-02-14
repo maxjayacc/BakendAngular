@@ -1,0 +1,27 @@
+label{
+    color: grey;
+}
+.suma{
+    border: 1px solid #999999;
+	display: table-cell;
+    padding: 3px 10px;
+    font-size: 14px;
+    color:cornflowerblue;
+}
+.p1{
+    font-size: 20px;
+    color:green;
+}
+.p2{
+    font-size: 20px;
+    color:red;
+}
+.p3{
+    font-size: 20px;
+    color:blue;
+}
+ul{
+    
+    padding-left: 100px
+}
+

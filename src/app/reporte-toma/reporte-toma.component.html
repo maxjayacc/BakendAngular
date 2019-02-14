@@ -1,0 +1,63 @@
+<div style="text-align:center">
+<app-componente-tarea></app-componente-tarea>
+</div>
+<div class="container">
+    <div class="row">      
+        <div class="col input-group">
+            <br>
+            <input type="text" class="form-control" placeholder="Nicho..." 
+            aria-label="Buscar" aria-describedby="button-addon2" 
+            [(ngModel)]="nicho" >
+          </div>
+
+        <div class="col input-group">
+            <br>
+            <select type="text" class="form-control" placeholder="Usuario..." aria-label="Buscar" aria-describedby="button-addon2" 
+            [(ngModel)]="usuario" >
+              <option value="NGALLEGOS">NGALLEGOS</option>
+              <option value="CLUNA">CLUNA</option>
+              <option value="FRODRIGUEZ">FRODRIGUEZ</option>
+              <option value="JCHAVARRI">JCHAVARRI</option>
+              <option value="YFARRO">YFARRO</option>
+              <option value="AGALVEZ">AGALVEZ</option>
+              <option value="JBERNARDO">JBERNARDO</option>
+              <option value="SVELARDE">SVELARDE</option>
+              <option value="CLAZARO">CLAZARO</option>
+            </select>
+          </div>
+          <button type="button" (click)="mover()">Tomas</button>
+    </div>
+    <br>
+  <router-outlet></router-outlet>
+  <div class="table-responsive-md">
+  <table class="table">
+  <thead class="thead-dark">
+  <tr>               
+    <th scope="col">Reconteo</th>
+    <th scope="col">Codigo de Ubicación</th>
+    <th scope="col">Codigo de Caja</th>
+    <th scope="col">Cantidad Tomada Correcta</th>
+    <th scope="col">Cantidad Tomada x Error</th>
+    <th scope="col" >Cantidad Tomada Total</th>
+    <th scope="col">Nombres</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let Proveedor of provedores | paginate: {itemsPerPage:7, currentPage:pageActual}">
+    <th>{{Proveedor.Reconteo}}</th>
+    <th>{{Proveedor.CodigoUbicacion}}</th>
+    <th>{{Proveedor.Codigo_Caja}}</th>
+    <th>{{Proveedor.cantidad_tomadaok}}</th>
+    <th>{{Proveedor.cantidad_tomadaErronea}}</th>
+    <th>{{Proveedor.cantidad_tomadaTOTAL}}</th>
+    <th>{{Proveedor.nombre}}</th>
+    </tr>
+  </tbody>
+  </table>
+  <pagination-controls class="my-pagination" (pageChange)="pageActual = $event"></pagination-controls>
+        <div class="suma" scope="col" >Total correcto: <p class="p1">{{ suma }}</p></div>
+        <div class="suma" scope="col" >Total incorrecto: <p class="p2">{{ suma1 }}<p></div>
+        <div class="suma" scope="col" > Total toma: <p class="p3">{{ suma2 }}</p></div>  
+        <br>      
+  </div>
+</div>
