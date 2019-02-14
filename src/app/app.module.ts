@@ -11,6 +11,7 @@ import { LogginComponent } from './loggin/loggin.component';
 import { ReporteTomaComponent } from './reporte-toma/reporte-toma.component';
 import { HomeComponent } from './home/home.component';
 import { CalimodComponent } from './calimod/calimod.component';
+import { AlmacenMatrizComponent } from './almacen-matriz/almacen-matriz.component';
 
 
 
@@ -22,6 +23,7 @@ import { CalimodComponent } from './calimod/calimod.component';
     ReporteTomaComponent,
     HomeComponent,
     CalimodComponent,
+    AlmacenMatrizComponent,
 
   ],
   imports: [
