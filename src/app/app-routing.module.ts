@@ -7,12 +7,14 @@ import {AppComponent} from './componente/app.component';
 import {HomeComponent} from './home/home.component';
 import {AuthGuard} from './guards/auth.guard';
 import {CalimodComponent} from './calimod/calimod.component';
+import {AlmacenMatrizComponent} from './almacen-matriz/almacen-matriz.component';
 
 const routes: Routes = [
 { path: 'calimod', component: CalimodComponent},
 { path: 'reporte-toma', component: ReporteTomaComponent, canActivate: [AuthGuard]},
 { path: 'loggin', component: LogginComponent},
 { path: 'componente-tarea', component: ComponenteTareaComponent},
+{ path: 'almacen-matriz', component: AlmacenMatrizComponent},
 { path: '**', component: LogginComponent}
 
 
