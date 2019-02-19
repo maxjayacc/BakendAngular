@@ -6,6 +6,8 @@ import { LogginComponent } from '../loggin/loggin.component';
 
 
 
+
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
