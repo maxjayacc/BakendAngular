@@ -8,16 +8,15 @@ aria-label="Buscar" aria-describedby="button-addon2"
 <option *ngFor ="let piso of pisos">{{piso.Niveles}}</option>
 </select>
 <button type="button" (click)="ListarNichos()" class="btn btn-outline-primary">lista de nichos</button>
+<button type="button" (click)="emitirSonido()" class="btn btn-outline-primary">sonido</button>
 </div>
 
 <table id="matrix" class="table-responsive">
-
   <!-- <tr *ngFor="let nicho of nichos" >
     <td ROWSPAN="10">
         <button id="b1" >{{nicho.Nivel}}{{nicho.DescripcionUbicacion}}{{nicho.NichoNumero}}<h4 id="cant:">{{nicho.Cantidad}}</h4> </button> 
     </td>
   </tr> -->
-
   <tr *ngFor="let letra of letras">
     <ng-container *ngFor="let nicho of nichos">
     <td  id='hola' *ngIf="letra == nicho.DescripcionUbicacion" >
@@ -26,10 +25,10 @@ aria-label="Buscar" aria-describedby="button-addon2"
        [ngClass]="{ 'azul': nicho.Cantidad >5,'morado': nicho.PorcentajeVolumen >80, 'rojo': nicho.Cantidad <=5 }" >
        
        {{letra}}  {{nicho.NichoNumero}}
-        <h2 id="cant">Cant: {{nicho.Cantidad}} </h2> 
+       <h2 id="cant">Cant: {{nicho.Cantidad}} </h2> 
         
-        <h6>{{nicho.PorcentajeVolumen}}%</h6>
-        <progress class="prog"  value="{{nicho.PorcentajeVolumen}}" max='100'></progress></button>  
+       <h6>{{nicho.PorcentajeVolumen}}%</h6>
+       <progress class="prog"  value="{{nicho.PorcentajeVolumen}}" max='100'></progress></button>  
       <!-- </div> -->
     </td>
   </ng-container>

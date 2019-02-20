@@ -29,13 +29,13 @@ export class ServiceProveedor {
                       );
   }
   listadoPisos(almacen: string) {
-    console.log('estoy en servicio');
+
     return this._http.get<Piso[]>(this.url + 'GetPisos/' + almacen)
                       .pipe(
                       );
   }
   listadoNichos(almacen: string, codigoPiso: string) {
-    console.log('estoy en servicio nichos');
+
     return this._http.get<Nicho[]>(this.url + 'GetStockPorNivel/' + almacen + '/' + codigoPiso)
                       .pipe(
                       );
@@ -47,4 +47,5 @@ export class ServiceProveedor {
     return  this._http.get<NichoDetalle[]>(this.url + 'GetStockPorNicho/'
     + almacen + '/' + nivel + '/' + descripcionUbicacion + '/' + nichonumero).toPromise();
   }
+
 }

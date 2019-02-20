@@ -39,11 +39,13 @@ export class AlmacenMatrizComponent {
 
 
   ListarPisos() {
+    this.emitirSonido();
     this.service.listadoPisos(this.almacen).subscribe(
     result => {
     this.pisos = result;
     console.log('ffff');
 });
+
   }
   async openDialog(letra: string, numero: string ) {
     this.descripcionUbicacion = letra;
@@ -85,7 +87,13 @@ export class AlmacenMatrizComponent {
     console.log(this.nichodetalles);
 } ) ;
 }
+emitirSonido() {
+  const sonido = new Audio();
+  sonido.src = 'pitido.mp3';
+  sonido.play();
 }
+}
+
 
 
 @Component({
@@ -95,11 +103,13 @@ export class AlmacenMatrizComponent {
 })
 export class DialogDataExampleDialogComponent {
 
-  constructor(public dialogRef: MatDialogRef<DialogDataExampleDialogComponent> ,@Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+  constructor(public dialogRef: MatDialogRef<DialogDataExampleDialogComponent> , @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
 
 
 onNoClick(): void {
   this.dialogRef.close();
 }
+
+
 
 }
