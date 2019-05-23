@@ -7,6 +7,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatNativeDateModule} from '@angular/material';
 
 
+
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './componente/app.component';
 import { ComponenteTareaComponent } from './componente-tarea/componente-tarea.component';
@@ -17,6 +20,7 @@ import { HomeComponent } from './home/home.component';
 import { CalimodComponent } from './calimod/calimod.component';
 import { AlmacenMatrizComponent, DialogDataExampleDialogComponent } from './almacen-matriz/almacen-matriz.component';
 import { MatDialogModule} from '@angular/material/dialog';
+import { GraficoChartComponent } from './grafico-chart/grafico-chart.component';
 
 
 @NgModule({
@@ -29,6 +33,9 @@ import { MatDialogModule} from '@angular/material/dialog';
     CalimodComponent,
     AlmacenMatrizComponent,
     DialogDataExampleDialogComponent,
+    GraficoChartComponent,
+
+
 
   ],
   entryComponents: [ DialogDataExampleDialogComponent],
@@ -42,6 +49,7 @@ import { MatDialogModule} from '@angular/material/dialog';
     MatDialogModule,
     BrowserAnimationsModule,
     MatNativeDateModule,
+
 
 
   ],

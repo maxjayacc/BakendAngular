@@ -8,6 +8,7 @@ import {HomeComponent} from './home/home.component';
 import {AuthGuard} from './guards/auth.guard';
 import {CalimodComponent} from './calimod/calimod.component';
 import {AlmacenMatrizComponent} from './almacen-matriz/almacen-matriz.component';
+import {GraficoChartComponent} from './grafico-chart/grafico-chart.component';
 
 
 const routes: Routes = [
@@ -16,8 +17,8 @@ const routes: Routes = [
 { path: 'loggin', component: LogginComponent},
 { path: 'componente-tarea', component: ComponenteTareaComponent},
 { path: 'almacen-matriz', component: AlmacenMatrizComponent, canActivate: [AuthGuard]},
+{ path: 'grafico-chart', component: GraficoChartComponent, canActivate: [AuthGuard]},
 { path: '**', component: LogginComponent},
-
 
 
 

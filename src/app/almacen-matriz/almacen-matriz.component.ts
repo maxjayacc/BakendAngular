@@ -39,7 +39,7 @@ export class AlmacenMatrizComponent {
 
 
   ListarPisos() {
-    this.emitirSonido();
+
     this.service.listadoPisos(this.almacen).subscribe(
     result => {
     this.pisos = result;
