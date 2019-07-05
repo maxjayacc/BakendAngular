@@ -1,7 +1,10 @@
 import { Injectable} from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
-import { ConfiguracionJava} from './configServicio';
+import {ConfiguracionJava} from './configServicio';
+import {tap} from 'rxjs/operators/';
+
+
 
 
 
@@ -13,11 +16,14 @@ const httpOptions = {
 };
 
 @Injectable()
-export class ServicioVentasService {
+export class ServiceLoggin {
   public url: string;
+  valor: boolean;
   constructor(private _http: HttpClient) {
-  this.url = ConfiguracionJava.url + ConfiguracionJava.wsProveedor + '/rest/';
-  }
-  
+      this.url = ConfiguracionJava.url + ConfiguracionJava.wsProveedor;
 
+  }
+  ValidaLoggin(name: string, password: string) {
+    return this._http.post<any>(this.url + '/users/login', {name: name, password: password}).pipe();
+  }
 }

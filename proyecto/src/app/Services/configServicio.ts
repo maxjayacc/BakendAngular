@@ -3,9 +3,4 @@ export const ConfiguracionJava = {
     wsProveedor: 'api',
 };
 
-export const ConfiguracionCsharp = {
-    url: 'http://localhost:65452/',
-    wsProveedor: 'v1',
-};
-
 

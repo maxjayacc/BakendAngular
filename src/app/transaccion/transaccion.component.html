@@ -1,0 +1,63 @@
+<div style="text-align:center"> 
+  <img width="300" alt="Angular Logo" src="https://i.pinimg.com/originals/a8/28/94/a8289475b7d32110c3dbb3b3b4a57f8e.jpg">
+  <app-componente-tarea></app-componente-tarea>
+</div>
+  <div class="container">
+      <div class="row">      
+          <div class="col input-group">
+              <br>
+              <input type="text" class="form-control" placeholder="Nicho..." 
+              aria-label="Buscar" aria-describedby="button-addon2" 
+              [(ngModel)]="nicho" >
+            </div>
+
+            <div class="col input-group">
+              
+              <br>
+
+              <select type="text" class="form-control" placeholder="Usuario..." aria-label="Buscar" aria-describedby="button-addon2" 
+              [(ngModel)]="usuario">
+                <option value="CLUNA">CLUNA</option>
+                <option value="NGALLEGOS">NGALLEGOS</option>
+                <option value="CLAZARO">CLAZARO</option>
+                <option value="AGALVEZ">AGALVEZ</option>
+                <option value="JBERNARDO">JBERNARDO</option>
+                <option value="FRODRIGUEZ">FRODRIGUEZ</option>
+                <option value="YFARRO">YFARRO</option>
+                <option value="JCHAVARRI">JCHAVARRI</option>
+                <option value="SVELARDES">SVELARDES</option>
+              </select>
+
+            </div>
+            <button type="button" (click)="fnListarCustomer()">Tomas</button>
+      </div>
+      <br>
+<router-outlet></router-outlet>
+<div class="table-responsive-md">
+<table class="table">
+  <thead class="thead-dark">
+    <tr>               
+      <th scope="col">id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Documento</th>
+      <th scope="col">Estado</th>
+      
+
+    
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let Customer of customers">
+      <th>{{Customer.id}}</th>
+      <th>{{Customer.firstName}}</th>
+      <th>{{Customer.lastName}}</th>
+      <th>{{Customer.identityDocument}}</th>
+      <th>{{Customer.active}}</th>
+    
+
+    </tr>
+  </tbody>
+
+</table>
+</div>

@@ -28,8 +28,8 @@ export class LogginComponent {
         this.auth.setUser(this.Usuario, this.root);
         console.log(result);
         console.log('----');
-        var token = result.token;
-        this.auth.setToken(result.token,this.root) ;
+        var token = result.bearerToken;
+        this.auth.setToken(result.bearerToken,this.root) ;
         console.log('que imprime');
         console.log(this.root);
         if (!this.root) {

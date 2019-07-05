@@ -15,16 +15,17 @@ import { Loggin} from '../Model/Usuario'
 export class AuthService {
   public url: string;
   public token: string;
-  
-  headers: HttpHeaders = new HttpHeaders({
-    "Content-Type" : "application/json",
-    "Authorization" : "Bearer" + localStorage.getItem('token')
-  });
-  
   constructor(private _http: HttpClient) {
-   
-}
-  setToken(datos: string, valor: boolean): void {
+  this.url = ConfiguracionJava.url + ConfiguracionJava.wsProveedor;
+  
+
+   }
+  headers: HttpHeaders = new HttpHeaders({
+    'Content-Type': 'application/json'
+    });
+
+
+    setToken(datos: string, valor: boolean): void {
       const user_string1 = valor;
       if (user_string1) {
         localStorage.setItem('token', datos);
@@ -47,6 +48,5 @@ export class AuthService {
 }
   logoutUser() {
     localStorage.removeItem('currentUser');
-    localStorage.removeItem('token');
   }
 }

@@ -19,7 +19,6 @@ import { HomeComponent } from './home/home.component';
 import { CalimodComponent } from './calimod/calimod.component';
 import { MatDialogModule} from '@angular/material/dialog';
 import { GraficoChartComponent } from './grafico-chart/grafico-chart.component';
-import { TransaccionComponent } from './transaccion/transaccion.component';
 
 
 @NgModule({
@@ -30,7 +29,6 @@ import { TransaccionComponent } from './transaccion/transaccion.component';
     HomeComponent,
     CalimodComponent,
     GraficoChartComponent,
-    TransaccionComponent,
 
 
 
