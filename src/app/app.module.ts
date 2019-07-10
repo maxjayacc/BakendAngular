@@ -20,6 +20,9 @@ import { CalimodComponent } from './calimod/calimod.component';
 import { MatDialogModule} from '@angular/material/dialog';
 import { GraficoChartComponent } from './grafico-chart/grafico-chart.component';
 import { TransaccionComponent } from './transaccion/transaccion.component';
+import { UsuarioComponent } from './usuario/usuario.component';
+import { HistoriaTransaccionComponent } from './historia-transaccion/historia-transaccion.component';
+import { CajeroComponent } from './cajero/cajero.component';
 
 
 @NgModule({
@@ -31,6 +34,9 @@ import { TransaccionComponent } from './transaccion/transaccion.component';
     CalimodComponent,
     GraficoChartComponent,
     TransaccionComponent,
+    UsuarioComponent,
+    HistoriaTransaccionComponent,
+    CajeroComponent,
 
 
 

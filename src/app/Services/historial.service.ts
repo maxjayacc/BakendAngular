@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders} from '@angular/common/http';
 import {ConfiguracionCloud} from './configServicio';
 
 @Injectable()
-export class ServiceCustomer {
+export class HistorialService {
   public url: string;
  
   constructor(private _http: HttpClient) {
@@ -13,7 +13,7 @@ export class ServiceCustomer {
     console.log(this.url);
 
   }
-  listadoCustomer(page: number, pageSize: number) {
+  ListarHistoria(page: number, pageSize: number) {
     
     var reqHeader = new HttpHeaders({ 
       'Content-Type': 'application/json',
@@ -22,7 +22,7 @@ export class ServiceCustomer {
 
    });
    console.log(localStorage.getItem("token"));
-    return this._http.get<any>(this.url + "customers?page=0&pageSize=100", { headers: reqHeader })
+    return this._http.get<any>(this.url + "history_transactions/all?page=0&pageSize=100", { headers: reqHeader })
                       .pipe(
                       );
   }

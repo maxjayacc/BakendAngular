@@ -26,12 +26,10 @@ export class LogginComponent {
       result => {
         this.root = result;
         this.auth.setUser(this.Usuario, this.root);
-        console.log(result);
-        console.log('----');
-        var token = result.token;
-        this.auth.setToken(result.token,this.root) ;
-        console.log('que imprime');
-        console.log(this.root);
+        
+        var token = JSON.stringify(result.bearerToken);
+        this.auth.setToken(token,this.root) ;
+       
         if (!this.root) {
         alert('Contraseña incorrecta');
         }

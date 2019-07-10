@@ -23,7 +23,7 @@
               </select>-->
             
             </div>
-            <button type="button" class="btn btn-primary" (click)="fnListarCustomer()">List Customer the Bank</button>
+            <button type="button" class="btn btn-primary" (click)="fnListarHistoria()">List Customer the Bank</button>
             
       </div>
       <br>
@@ -33,22 +33,23 @@
   <thead class="thead-dark">
     <tr>               
       <th scope="col">id</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Apellidos</th>
-      <th scope="col">Estado</th>
-      <th scope="col">Número de Cuenta</th>
+      <th scope="col">Fecha de Creación</th>
+      <th scope="col">Cuenta Origen</th>
+      <th scope="col">Cuenta Destino</th>
+      <th scope="col">Monto</th>
       
 
     
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let Customer of customers">
-      <th>{{Customer.id}}</th>
-      <th>{{Customer.firstName}}</th>
-      <th>{{Customer.lastName}}</th>
-      <th>{{Customer.isActive}}</th>
-      <th>{{Customer.bankAccountsDto}}</th>
+    <tr *ngFor="let Historial of historials">
+      <th>{{Historial.id}}</th>
+      <th>{{Historial.create_time}}</th>
+      <th>{{Historial.originAccountNumber}}</th>
+      <th>{{Historial.destinationAccountNumber}}</th>
+      <th>{{Historial.amount}}</th>
+
     
 
     </tr>

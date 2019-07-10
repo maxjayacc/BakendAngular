@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 import { map } from 'rxjs/operators';
 import { isNullOrUndefined } from 'util';
-import { ConfiguracionJava} from './configServicio';
+import { ConfiguracionCsharp} from './configServicio';
 import { USE_VALUE } from '@angular/core/src/di/injector';
 import { Loggin} from '../Model/Usuario'
 
@@ -18,7 +18,7 @@ export class AuthService {
   
   headers: HttpHeaders = new HttpHeaders({
     "Content-Type" : "application/json",
-    "Authorization" : "Bearer" + localStorage.getItem('token')
+    "Authorization" : "Bearer " + localStorage.getItem('token')
   });
   
   constructor(private _http: HttpClient) {

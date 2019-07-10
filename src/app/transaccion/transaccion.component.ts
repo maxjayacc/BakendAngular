@@ -12,15 +12,17 @@ import {Customer} from '../Model/customer';
 export class TransaccionComponent  {
   title = 'my-tarea';
   customers: Customer[];
+ 
 
   constructor( private service: ServiceCustomer) {
    }
    fnListarCustomer() {
-     
-    this.service.listadoCustomer().subscribe(
+    const page=0;
+    const pageSize=100;
+    this.service.listadoCustomer(page,pageSize).subscribe(
       result => {
        
-        this.customers = result;
+        this.customers = result.data;
         console.log(this.customers);
         if (!this.customers) {
           alert('Error en el Servidor');

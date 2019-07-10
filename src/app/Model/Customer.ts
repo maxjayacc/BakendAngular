@@ -3,7 +3,7 @@ export class Customer {
             public id: number,
             public firstName: string,
             public lastName: string,
-            public identityDocument: string,
-            public active: boolean,
+            public isActive: boolean,
+            public bankAccountsDto: string,
             ) {}
     }

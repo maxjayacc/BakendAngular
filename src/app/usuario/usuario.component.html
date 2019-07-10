@@ -1,0 +1,48 @@
+<div style="text-align:center"> 
+  
+  <app-componente-tarea></app-componente-tarea>
+</div>
+  <div class="container">
+      <div class="row"> 
+    <div class="col input-group">
+      <br>
+      
+      <input type="text" class="form-control" placeholder="Id..." 
+      aria-label="Buscar" aria-describedby="button-addon2" 
+      [(ngModel)]="Id" > 
+    </div>
+
+    <div class="col input-group">
+      
+      <br>
+
+
+    </div>
+    <button type="button" class="btn btn-primary" (click)="fnListarUsers()">Cuentas x Usuario the Bank</button>
+    
+      </div>
+      <br>
+<router-outlet></router-outlet>
+<div class="table-responsive-md">
+<table class="table">
+  <thead class="thead-dark">
+      <tr>               
+          <th scope="col">id</th>
+          <th scope="col">Nombre Usuario</th>
+         
+  
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let Cuenta of cuentas">
+          <th>{{Cuenta.id}}</th>
+          <th>{{Cuenta.name}}</th>
+         
+  
+        
+    
+        </tr>
+  </tbody>
+
+</table>
+</div>

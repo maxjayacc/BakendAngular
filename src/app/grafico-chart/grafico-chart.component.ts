@@ -26,7 +26,7 @@ export class GraficoChartComponent implements OnInit {
         data: {
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
         datasets: [{
-            label: 'Ventas',
+            label: 'Cuentas',
             backgroundColor: [
               '#FF6384',
               '#63FF84',

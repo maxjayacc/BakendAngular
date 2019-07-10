@@ -1,0 +1,90 @@
+<div style="text-align:center"> 
+  
+  <h1>Deposito/Retiro</h1>
+</div>
+  <div class="container">
+      <div class="row">      
+         
+        <div class="col input-group">
+              <br>
+              
+           <input type="text" class="form-control" placeholder="accountNumber..." 
+            aria-label="Buscar" aria-describedby="button-addon2" 
+            [(ngModel)]="accountNumber" >
+            </div>
+           
+         
+
+            <div class="col input-group">
+              
+              <br>
+              <input type="text" class="form-control" placeholder="amount..." 
+              aria-label="Buscar" aria-describedby="button-addon2" 
+              [(ngModel)]="amount" >
+            
+            </div>
+            <button type="button" class="btn btn-primary" (click)="fnDepositar()">Realizar Deposito</button>
+            <label>(*)</label><button type="button" class="btn btn-primary" (click)="fnRetirar()">Realizar Retiro</button>
+          </div>
+      </div>
+<!----><hr>
+<div style="text-align:center"> 
+  
+    <h1>Tranferencias</h1>
+  </div>
+
+      <div class="container">
+        <div class="row">      
+            <div class="col input-group">
+                
+                <br>
+                <input type="text" class="form-control" placeholder="amount..." 
+                aria-label="Buscar" aria-describedby="button-addon2" 
+                [(ngModel)]="amount2" >
+              
+              </div>
+           
+          <div class="col input-group">
+                <br>
+                
+             <input type="text" class="form-control" placeholder="fromAccountNumber..." 
+              aria-label="Buscar" aria-describedby="button-addon2" 
+              [(ngModel)]="fromAccountNumber" >
+              </div>
+             
+           
+  
+              <div class="col input-group">
+                
+                <br>
+                <input type="text" class="form-control" placeholder="toAccountNumber..." 
+                aria-label="Buscar" aria-describedby="button-addon2" 
+                [(ngModel)]="toAccountNumber" >
+              
+              </div>
+              <button type="button" class="btn btn-primary" (click)="fnTranferecia()">Realizar Tranferencias</button>
+             
+            </div>
+        </div>
+
+      <br>
+<router-outlet></router-outlet>
+<div class="table-responsive-md">
+<table class="table">
+  <thead class="thead-dark">
+    <tr>               
+      <th scope="col">Estado</th>
+      
+      
+   
+    
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>{{resultadoss}}</th>
+    </tr>
+  </tbody>
+
+</table>
+</div>

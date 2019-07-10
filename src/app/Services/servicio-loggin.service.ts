@@ -1,7 +1,7 @@
 import { Injectable} from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
-import {ConfiguracionCsharp} from './configServicio';
+import {ConfiguracionCloud} from './configServicio';
 import {tap} from 'rxjs/operators/';
 
 
@@ -20,11 +20,11 @@ export class ServiceLoggin {
   public url: string;
   valor: boolean;
   constructor(private _http: HttpClient) {
-      this.url = ConfiguracionCsharp.url + ConfiguracionCsharp.wsProveedor;
+      this.url = ConfiguracionCloud.url + ConfiguracionCloud.wsProveedor;
 
   }
     
-  ValidaLoggin(Name: string, Password: string) {
-    return this._http.post<any>(this.url + '/auth/login', {Name: Name, Password: Password}).pipe();
+  ValidaLoggin(name: string, password: string) {
+    return this._http.post<any>(this.url + '/users/login', {name: name, password: password}).pipe();
   }
 }

@@ -8,4 +8,9 @@ export const ConfiguracionCsharp = {
     wsProveedor: 'v1',
 };
 
+export const ConfiguracionCloud = {
+    url: 'https://ads2019i.cfapps.io/',
+    wsProveedor: 'api',
+};
+
 
